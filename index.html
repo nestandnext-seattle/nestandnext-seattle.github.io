@@ -12,10 +12,10 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
 a{color:inherit}
 .container{width:min(1140px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;padding:17px 0;background:rgba(247,244,238,.97);border-bottom:1px solid rgba(221,216,206,.75);backdrop-filter:blur(8px)}
+nav{position:sticky;top:0;z-index:10;padding:10px 0;background:rgba(247,244,238,.97);border-bottom:1px solid rgba(221,216,206,.75);backdrop-filter:blur(8px)}
 .nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.logo{font-family:Georgia,serif;font-size:22px;font-weight:bold;letter-spacing:.04em}
-.logo span{color:var(--sage)}
+.logo{display:block;flex:0 0 auto;line-height:0}
+.logo img{display:block;width:300px;max-width:100%;height:auto}
 .navlinks{display:flex;gap:25px;flex-wrap:wrap}
 .navlinks a{text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--muted)}
 .navlinks a:hover{color:var(--sage-dark)}
@@ -75,21 +75,21 @@ section{padding:88px 0}
 .contact-card a:hover{text-decoration:underline}
 footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:850px){.hero-grid,.who-grid,.contact,.about-grid{grid-template-columns:1fr}.hero{padding:70px 0 78px}.hero-note{max-width:620px}.pricing{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.about-grid{gap:35px}.bio-photo{max-width:300px}}
-@media(max-width:560px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:15px}.navlinks a{font-size:11px}.hero{padding:55px 0 65px}section{padding:65px 0}.cards,.steps,.checks{grid-template-columns:1fr}.btn.secondary{margin:10px 0 0}.card{padding:23px}.hero-note{padding:26px}}
+@media(max-width:850px){.logo img{width:260px}.hero-grid,.who-grid,.contact,.about-grid{grid-template-columns:1fr}.hero{padding:70px 0 78px}.hero-note{max-width:620px}.pricing{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.about-grid{gap:35px}.bio-photo{max-width:300px}}
+@media(max-width:560px){.logo img{width:230px}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:15px}.navlinks a{font-size:11px}.hero{padding:55px 0 65px}section{padding:65px 0}.cards,.steps,.checks{grid-template-columns:1fr}.btn.secondary{margin:10px 0 0}.card{padding:23px}.hero-note{padding:26px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="container nav">
-    <div class="logo">NEST <span>&</span> NEXT</div>
+    <a class="logo" href="#home" aria-label="Nest & Next Seattle home"><img src="nest-next-logo.png" alt="Nest & Next — Home & Life Transition Concierge"></a>
     <div class="navlinks">
       <a href="#services">SERVICES</a><a href="#approach">APPROACH</a><a href="#who">WHO WE HELP</a><a href="#fees">FEES</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="home">
 <div class="container hero-grid">
   <div>
     <div class="eyebrow">Seattle Area • Home & Life Transition Concierge</div>
