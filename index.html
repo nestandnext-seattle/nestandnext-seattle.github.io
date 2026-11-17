@@ -1,250 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nest & Next Seattle provides thoughtful moving, downsizing, and home-organization support for older adults and their families.">
-  <title>Nest & Next Seattle | Moving & Downsizing Support</title>
-  <style>
-    :root {
-      --ink: #29352f;
-      --muted: #64716a;
-      --sage: #748b78;
-      --sage-dark: #526b58;
-      --cream: #f7f5ef;
-      --sand: #e9e3d7;
-      --white: #fff;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; }
-    .sans { font-family: Arial, Helvetica, sans-serif; }
-    .topbar {
-      padding: 15px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      background: var(--white);
-    }
-    .brand {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-decoration: none;
-    }
-    .brand span { color: var(--sage-dark); }
-    nav { display: flex; gap: 24px; flex-wrap: wrap; }
-    nav a {
-      font: 600 .83rem Arial, sans-serif;
-      text-decoration: none;
-      color: var(--muted);
-    }
-    nav a:hover { color: var(--sage-dark); }
-    .hero {
-      background: var(--cream);
-      padding: 72px 6%;
-    }
-    .hero-inner {
-      max-width: 1160px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 64px;
-      align-items: center;
-    }
-    .eyebrow {
-      color: var(--sage-dark);
-      font: 700 .75rem Arial, sans-serif;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    h1 {
-      max-width: 650px;
-      margin: 14px 0 20px;
-      font-size: clamp(2.5rem, 5vw, 4.4rem);
-      line-height: 1.06;
-      font-weight: 500;
-      letter-spacing: -.035em;
-    }
-    .hero p {
-      max-width: 560px;
-      color: var(--muted);
-      font: 1.08rem/1.8 Arial, sans-serif;
-    }
-    .actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 30px; }
-    .button {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 4px;
-      background: var(--sage-dark);
-      color: var(--white);
-      text-decoration: none;
-      font: 700 .9rem Arial, sans-serif;
-    }
-    .button.secondary {
-      background: transparent;
-      color: var(--sage-dark);
-      border: 1px solid var(--sage-dark);
-    }
-    .portrait-wrap { position: relative; max-width: 440px; justify-self: center; }
-    .portrait-wrap::before {
-      content: "";
-      position: absolute;
-      inset: 18px -18px -18px 18px;
-      border: 1px solid #c7cbbd;
-      border-radius: 8px;
-    }
-    .portrait {
-      position: relative;
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center 28%;
-      border-radius: 8px;
-      box-shadow: 0 18px 45px rgba(39, 52, 44, .12);
-    }
-    section { padding: 76px 6%; }
-    .section-inner { max-width: 1080px; margin: auto; }
-    .section-heading { max-width: 690px; margin: 0 auto 38px; text-align: center; }
-    h2 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.15; }
-    .section-heading p { color: var(--muted); font: 1rem/1.7 Arial, sans-serif; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .service {
-      padding: 28px;
-      background: var(--cream);
-      border-radius: 7px;
-    }
-    .service .number {
-      color: var(--sage-dark);
-      font: 700 .75rem Arial, sans-serif;
-      letter-spacing: .12em;
-    }
-    .service h3 { margin: 12px 0 8px; font-size: 1.35rem; font-weight: 500; }
-    .service p { margin: 0; color: var(--muted); font: .94rem/1.7 Arial, sans-serif; }
-    .about { background: #eef0e9; }
-    .about-copy { max-width: 760px; margin: auto; text-align: center; }
-    .about-copy p { color: #536159; font: 1.03rem/1.85 Arial, sans-serif; }
-    .contact { text-align: center; }
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px 28px;
-      margin-top: 24px;
-      font: 600 .95rem Arial, sans-serif;
-    }
-    .contact-links a { color: var(--sage-dark); text-decoration: none; }
-    footer {
-      padding: 24px 6%;
-      background: var(--ink);
-      color: #e9eee9;
-      text-align: center;
-      font: .8rem Arial, sans-serif;
-    }
-    @media (max-width: 760px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { gap: 14px; }
-      .hero { padding: 52px 7%; }
-      .hero-inner { grid-template-columns: 1fr; gap: 38px; }
-      .portrait-wrap { width: min(82%, 390px); }
-      section { padding: 58px 7%; }
-      .services { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nest & Next Seattle offers home organization, decluttering, downsizing, moving coordination, and home transition support.">
+<title>Nest & Next Seattle | Home Organization & Transition Support</title>
+<style>
+:root{--ink:#29352f;--muted:#657168;--sage:#788d79;--deep:#526b58;--cream:#f7f5ef;--pale:#edf0e8;--sand:#e9e3d7;--white:#fff;--rose:#eadbd2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Georgia,"Times New Roman",serif;line-height:1.6}a{color:inherit}.sans{font-family:Arial,Helvetica,sans-serif}
+.topbar{padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:20px;background:#fff}
+.brand{font-size:1.28rem;font-weight:700;letter-spacing:.05em;text-decoration:none}.brand span{color:var(--deep)}
+nav{display:flex;gap:24px;flex-wrap:wrap}nav a{font:700 .8rem Arial,sans-serif;letter-spacing:.07em;text-decoration:none;color:var(--muted)}nav a:hover{color:var(--deep)}
+.hero{background:var(--cream);padding:66px 6% 58px}.hero-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.03fr .97fr;gap:48px;align-items:center}
+.eyebrow{color:var(--deep);font:700 .74rem Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+h1{max-width:660px;margin:13px 0 18px;font-size:clamp(2.55rem,5vw,4.25rem);line-height:1.07;font-weight:500;letter-spacing:-.035em}
+.hero p{max-width:580px;color:var(--muted);font:1.06rem/1.8 Arial,sans-serif}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}.button{display:inline-block;padding:13px 21px;border-radius:4px;background:var(--deep);color:white;text-decoration:none;font:700 .88rem Arial,sans-serif}.button.secondary{background:transparent;color:var(--deep);border:1px solid var(--deep)}
+.hero-art{position:relative;min-height:345px;display:grid;grid-template-columns:1fr 1fr;gap:15px;align-content:center;max-width:470px;margin:auto}
+.art-card{min-height:145px;padding:18px 12px 13px;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(48,62,51,.07);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.art-card:nth-child(2){transform:translateY(22px);background:#eef0e8}.art-card:nth-child(3){transform:translateY(-8px);background:#f0e5df}.art-card:nth-child(4){transform:translateY(14px);background:#e9eee8}
+.art-card svg{width:78px;height:70px;margin-bottom:6px}.art-card span{font:700 .78rem Arial,sans-serif;color:var(--deep);letter-spacing:.03em}
+section{padding:74px 6%}.section-inner{max-width:1100px;margin:auto}.section-heading{max-width:720px;margin:0 auto 38px;text-align:center}h2{margin:8px 0 12px;font-size:clamp(2rem,4vw,3rem);font-weight:500;line-height:1.15}.section-heading p{color:var(--muted);font:1rem/1.75 Arial,sans-serif}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.service{padding:25px 25px 27px;background:var(--cream);border-radius:9px;min-height:245px}.service:nth-child(2),.service:nth-child(5){background:#eef0e9}.service:nth-child(3),.service:nth-child(6){background:#f3eae5}
+.service-illustration{height:85px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:7px}.service-illustration svg{width:100px;height:82px}.service .number{color:var(--deep);font:700 .7rem Arial,sans-serif;letter-spacing:.13em}.service h3{margin:8px 0 7px;font-size:1.28rem;font-weight:500}.service p{margin:0;color:var(--muted);font: .92rem/1.7 Arial,sans-serif}
+.process{background:var(--pale)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.step{text-align:center;padding:10px 15px}.step .circle{width:55px;height:55px;border-radius:50%;background:#fff;color:var(--deep);display:grid;place-items:center;margin:0 auto 13px;font:700 1rem Arial,sans-serif}.step h3{font-size:1.2rem;font-weight:500;margin:5px}.step p{color:var(--muted);font: .92rem/1.7 Arial,sans-serif}
+.about{background:#fff}.about-inner{max-width:950px;margin:auto;display:grid;grid-template-columns:1fr 300px;gap:45px;align-items:center}.about-copy p{color:var(--muted);font:1rem/1.85 Arial,sans-serif}.founder-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:12px;box-shadow:0 15px 40px rgba(39,52,44,.13)}
+.contact{text-align:center;background:var(--cream)}.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 28px;margin-top:24px;font:600 .95rem Arial,sans-serif}.contact-links a{color:var(--deep);text-decoration:none}
+footer{padding:23px 6%;background:var(--ink);color:#e9eee9;text-align:center;font:.8rem Arial,sans-serif}
+@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero{padding:48px 7%}.hero-inner{grid-template-columns:1fr;gap:25px}.hero-art{width:100%;max-width:430px;min-height:300px}.services{grid-template-columns:1fr 1fr}.about-inner{grid-template-columns:1fr;gap:25px}.founder-photo{max-width:300px;margin:auto}.steps{grid-template-columns:1fr}}
+@media(max-width:480px){.services{grid-template-columns:1fr}.hero-art{gap:10px}.art-card{min-height:130px}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home">NEST <span>&</span> NEXT</a>
-    <nav aria-label="Main navigation">
-      <a href="#services">SERVICES</a>
-      <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div>
-          <div class="eyebrow">Thoughtful support for life's next chapter</div>
-          <h1>Moving forward, with a little more ease.</h1>
-          <p>Nest & Next Seattle helps older adults and their families navigate downsizing, moving, and getting settled — with practical help, thoughtful planning, and a caring hand at every step.</p>
-          <div class="actions">
-            <a class="button" href="mailto:nestandnext.seattle@gmail.com?subject=Let's%20talk%20about%20moving%20support">Let's Talk</a>
-            <a class="button secondary" href="#services">Explore Services</a>
-          </div>
-        </div>
-        <div class="portrait-wrap">
-          <!-- Upload the new portrait into your repository's assets folder using this exact filename. -->
-          <img class="portrait" src="assets/headshot-professional.png" alt="Nest & Next Seattle founder">
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-inner">
-        <div class="section-heading">
-          <div class="eyebrow">How we can help</div>
-          <h2>A smoother transition, from start to finish.</h2>
-          <p>Whether you're planning a move or helping a loved one make a change, you don't have to manage every detail alone.</p>
-        </div>
-        <div class="services">
-          <article class="service">
-            <div class="number">01 / DOWNSIZING</div>
-            <h3>Thoughtful downsizing</h3>
-            <p>Sort, organize, and make decisions about what to keep, share, donate, or let go — at a comfortable pace.</p>
-          </article>
-          <article class="service">
-            <div class="number">02 / MOVING</div>
-            <h3>Move coordination</h3>
-            <p>Plan the details, coordinate moving-day needs, and help make the transition feel more manageable.</p>
-          </article>
-          <article class="service">
-            <div class="number">03 / SETTLING IN</div>
-            <h3>Home organization</h3>
-            <p>Unpack, arrange, and create practical systems so a new space feels comfortable, familiar, and ready to enjoy.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-copy">
-        <div class="eyebrow">A personal approach</div>
-        <h2>Every move has a story.</h2>
-        <p>Big life transitions can feel overwhelming, especially when there are many decisions and details to manage. Nest & Next brings organization, patience, and hands-on project coordination to help make the process feel clearer and less stressful.</p>
-        <p>Serving Seattle and surrounding communities.</p>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="eyebrow">Start with a conversation</div>
-        <h2>Let's make the next step feel easier.</h2>
-        <p class="sans" style="color:var(--muted)">Reach out to talk about what you need and how Nest & Next can help.</p>
-        <div class="contact-links">
-          <a href="tel:8024896503">802-489-6503</a>
-          <a href="mailto:nestandnext.seattle@gmail.com">nestandnext.seattle@gmail.com</a>
-          <a href="https://www.instagram.com/nestandnext.seattle/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© <span id="year"></span> Nest & Next Seattle · Thoughtful help for life's next chapter</footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<header class="topbar">
+<a class="brand" href="#home">NEST <span>&</span> NEXT</a>
+<nav aria-label="Main navigation"><a href="#services">SERVICES</a><a href="#process">HOW IT WORKS</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div><div class="eyebrow">Thoughtful support for life's next chapter</div>
+<h1>A little more order. A lot more ease.</h1>
+<p>From organizing a home to navigating a major move, Nest & Next Seattle provides hands-on help to make your space work better and life's transitions feel more manageable.</p>
+<div class="actions"><a class="button" href="mailto:nestandnext.seattle@gmail.com?subject=Let's%20talk%20about%20how%20you%20can%20help">Let's Talk</a><a class="button secondary" href="#services">Explore Services</a></div></div>
+<div class="hero-art" aria-label="Illustrations representing home organization, decluttering, moving and settling in">
+<div class="art-card"><svg viewBox="0 0 100 82" fill="none" stroke="#657f69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 37 50 10l35 27v37H15z" fill="#e8eee5"/><path d="M39 74V48h22v26M27 43h46"/><path d="M28 27h13v10H28z" fill="#fff"/><path d="M69 49h8v10h-8z"/></svg><span>HOME ORGANIZATION</span></div>
+<div class="art-card"><svg viewBox="0 0 100 82" fill="none" stroke="#9a7868" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 25h62v48H19z" fill="#fff"/><path d="M15 25h70M27 17h46M31 39h38M31 51h27M31 63h33"/><path d="m67 53 7 7 13-16" stroke="#657f69"/></svg><span>DECLUTTER & RESET</span></div>
+<div class="art-card"><svg viewBox="0 0 100 82" fill="none" stroke="#9a7868" stroke-width="3" stroke-linejoin="round"><path d="m15 30 35-18 35 18v43H15z" fill="#fff"/><path d="M50 12v61M15 30l35 18 35-18M30 22l35 18M70 22 35 40"/><path d="M39 73V54h22v19" stroke="#657f69"/></svg><span>DOWNSIZING & MOVING</span></div>
+<div class="art-card"><svg viewBox="0 0 100 82" fill="none" stroke="#657f69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 39h64v34H18z" fill="#fff"/><path d="M12 39 50 12l38 27M30 73V50h40v23"/><path d="M42 31c0-8 16-8 16 0 0 7-8 12-8 12s-8-5-8-12z" fill="#e7d7cd"/></svg><span>SETTLING IN</span></div>
+</div></div></section>
+<section id="services"><div class="section-inner"><div class="section-heading"><div class="eyebrow">Ways we can help</div><h2>Support for your home, your move, and everything in between.</h2><p>Whether you need a more organized home or support through a life transition, we can tailor our help to what matters most to you.</p></div>
+<div class="services">
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#657f69" stroke-width="3"><path d="M13 29 50 8l37 21v45H13z" fill="#fff"/><path d="M39 74V48h22v26M25 39h15v-9H25zM65 39h12"/></svg></div><div class="number">01 / ORGANIZE</div><h3>Home Organization</h3><p>Organize closets, kitchens, garages, and living spaces. Create practical systems that make everyday life easier to manage.</p></article>
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#9a7868" stroke-width="3"><path d="M20 17h60v58H20z" fill="#fff"/><path d="M31 31h38M31 44h38M31 57h25"/><path d="m61 58 7 7 15-18" stroke="#657f69"/></svg></div><div class="number">02 / SIMPLIFY</div><h3>Decluttering & Home Resets</h3><p>Sort belongings, clear out crowded spaces, and refresh rooms with a thoughtful, judgment-free approach.</p></article>
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#9a7868" stroke-width="3"><path d="m14 29 36-19 36 19v46H14z" fill="#fff"/><path d="M50 10v65M14 29l36 18 36-18"/></svg></div><div class="number">03 / RIGHT-SIZE</div><h3>Downsizing</h3><p>Make decisions about what to keep, gift, donate, or let go when preparing for a smaller or different space.</p></article>
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#657f69" stroke-width="3"><path d="M12 34h76v40H12z" fill="#fff"/><path d="M7 34h86M22 34V21h56v13M22 48h56v26"/></svg></div><div class="number">04 / COORDINATE</div><h3>Moving Coordination</h3><p>Organize timelines, to-do lists, vendors, and moving-day details to keep the process on track.</p></article>
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#9a7868" stroke-width="3"><path d="M17 30h66v45H17z" fill="#fff"/><path d="M17 30 50 12l33 18M36 75V48h28v27"/><path d="M50 12v18"/></svg></div><div class="number">05 / SETTLE IN</div><h3>Unpacking & Setup</h3><p>Unpack, arrange furniture and belongings, and set up comfortable, functional spaces in a new home.</p></article>
+<article class="service"><div class="service-illustration"><svg viewBox="0 0 100 82" fill="none" stroke="#657f69" stroke-width="3"><path d="M14 27h72v48H14z" fill="#fff"/><path d="M25 27V15h50v12M27 43h46M27 55h30M27 66h39"/></svg></div><div class="number">06 / SUPPORT</div><h3>Family & Home Transition Support</h3><p>Provide an extra set of hands for families managing a loved one's move, home projects, and all the details in between.</p></article>
+</div></div></section>
+<section class="process" id="process"><div class="section-inner"><div class="section-heading"><div class="eyebrow">A simple approach</div><h2>One step at a time.</h2><p>Personalized help that starts with listening and grows around your priorities.</p></div><div class="steps"><div class="step"><div class="circle">01</div><h3>Let's talk</h3><p>We start with a conversation about your home, goals, and what feels most overwhelming.</p></div><div class="step"><div class="circle">02</div><h3>Make a plan</h3><p>Together, we map out practical next steps and the level of hands-on support you need.</p></div><div class="step"><div class="circle">03</div><h3>Make it happen</h3><p>We work through the details with care, keeping your priorities at the center.</p></div></div></div></section>
+<section class="about" id="about"><div class="about-inner"><div class="about-copy"><div class="eyebrow">Meet the founder</div><h2>Every home — and every next chapter — deserves care.</h2><p>Hi, I'm the founder of Nest & Next Seattle. I started Nest & Next with a simple belief: life's transitions should feel less overwhelming and more manageable.</p><p>Whether you're looking for help organizing your home, preparing for a move, downsizing, or supporting a loved one through a transition, I understand there's much more involved than simply moving things from one place to another.</p><p>My approach is personal, organized, and hands-on. I bring structure to the process through thoughtful planning, project coordination, and practical support. Most importantly, I want every client and family to feel respected, supported, and confident throughout the process.</p><p><strong>Serving Seattle and surrounding communities.</strong></p></div><img class="founder-photo" src="headshot-professional.png" alt="Nest & Next Seattle founder in a welcoming home setting"></div></section>
+<section class="contact" id="contact"><div class="section-inner"><div class="eyebrow">Start with a conversation</div><h2>Let's make your next step easier.</h2><p class="sans" style="color:var(--muted)">Tell us what you need help with. We'd love to hear from you.</p><div class="contact-links"><a href="tel:8024896503">802-489-6503</a><a href="mailto:nestandnext.seattle@gmail.com">nestandnext.seattle@gmail.com</a><a href="https://www.instagram.com/nestandnext.seattle/" target="_blank" rel="noopener">Instagram @nestandnext.seattle</a></div></div></section>
+</main><footer>© <span id="year"></span> Nest & Next Seattle · Thoughtful help for life's next chapter</footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body></html>
